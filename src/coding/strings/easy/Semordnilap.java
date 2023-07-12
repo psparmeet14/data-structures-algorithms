@@ -14,7 +14,7 @@ import java.util.HashSet;
     [["diaper", "repaid"], ["abc", "cba"]]
 
  */
-public class SemordnilapPairs {
+public class Semordnilap {
     // O(n * m) time | O(n * m) space - where n is the number of words
     // and m is the length of the longest word
     public ArrayList<ArrayList<String>> semordnilap(String[] words) {
