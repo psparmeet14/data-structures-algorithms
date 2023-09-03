@@ -1,0 +1,67 @@
+package coding.linkedlists;
+
+public class LinkedListMain {
+
+    public static void main(String[] args) {
+        ListNode l4 = new ListNode("Messi", null);
+        ListNode l3 = new ListNode("Steph Curry", l4);
+        ListNode l2 = new ListNode("Ronaldo", l3);
+        ListNode l1 = new ListNode("Michael Jordan", l2);
+
+        ListNode temp = l1;
+
+        // insert new node
+        ListNode l5 = new ListNode("Garnett", null);
+
+        // insert at end of LinkedList
+        while (temp != null) {
+            if (temp.next == null) {
+                temp.next = l5;
+                break;
+            }
+            temp = temp.next;
+        }
+
+        System.out.println("Insert Garnett at the end");
+        System.out.println(l1);
+        l4.setNext(null);
+        temp = l1;
+
+        // insert at index after Michael Jordan
+        while (temp != null) {
+            if (temp.player.equals("Michael Jordan")) {
+                l5.setNext(temp.next);
+                temp.setNext(l5);
+            }
+            temp = temp.next;
+        }
+
+        System.out.println();
+        System.out.println("Insert Garnett after Michael Jordan");
+        System.out.println(l1);
+    }
+}
+
+class ListNode {
+    String player;
+    ListNode next;
+
+    public ListNode(String player, ListNode next) {
+        this.player = player;
+        this.next = next;
+    }
+
+    public void setNext(ListNode node) {
+        this.next = node;
+    }
+
+    public String toString() {
+        String result = "";
+        ListNode temp = this;
+        while (temp != null) {
+            result += " [" + temp.player + "]";
+            temp = temp.next;
+        }
+        return result;
+    }
+}
