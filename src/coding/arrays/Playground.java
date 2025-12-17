@@ -25,14 +25,48 @@ public class Playground {
         return false;
     }
 
+    /**
+     * Using HashSet to track seen elements.
+     *
+     * Time Complexity: O(n), where n is the length of nums.
+     * Space Complexity: O(n), where n is the number of unique elements in nums.
+     *
+     * @param nums
+     * @return
+     */
     public boolean hasTwoSameElements_hashSetAndForEach(int[] nums) {
-//        HashSet<Integer> seen = new HashSet<>();
-//        for (int num : nums) {
-//            if (seen.contains(num)) {
-//                return true;
-//            }
-//            seen.add(num);
-//        }
-//        return false;
+        if (nums == null || nums.length < 2) {
+            return false;
+        }
+        HashSet<Integer> seen = new HashSet<>();
+        for (int num : nums) {
+            if (seen.contains(num)) {
+                return true;
+            }
+            seen.add(num);
+        }
+        return false;
+    }
+
+    /**
+     * Using HashSet to track seen elements.
+     *
+     * Time Complexity: O(n), where n is the length of nums.
+     * Space Complexity: O(n), where n is the number of unique elements in nums.
+     *
+     * @param nums
+     * @return
+     */
+    public boolean hasTwoSameElements_hashSetAndForEach2(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return false;
+        }
+        HashSet<Integer> seen = new HashSet<>();
+        for (int num : nums) {
+            if (!seen.add(num)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
