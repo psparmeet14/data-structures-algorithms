@@ -1,4 +1,4 @@
-package coding.arrays;
+package coding.archived.arrays;
 
 import java.util.HashSet;
 

@@ -1,4 +1,4 @@
-package coding.linkedlists;
+package coding.archived.linkedlists;
 
 public class LinkedListMain {
 

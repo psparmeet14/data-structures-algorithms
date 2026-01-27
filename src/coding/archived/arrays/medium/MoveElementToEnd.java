@@ -1,4 +1,4 @@
-package coding.arrays.medium;
+package coding.archived.arrays.medium;
 
 import java.util.List;
 

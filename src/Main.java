@@ -1,4 +1,4 @@
-import coding.arrays.Playground;
+import coding.archived.arrays.Playground;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,9 +10,6 @@ public class Main {
         nums[1] = 6;
         nums[2] = 8;
         nums[3] = 1;
-
-        // Creating an integer array during instantiation
-        int[] elements = new int[]{1, 6, 8, 1};
 
         Playground playground = new Playground();
         var result = playground.hasTwoSameElements_forLoop(nums);

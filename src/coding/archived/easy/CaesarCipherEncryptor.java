@@ -1,4 +1,4 @@
-package coding.strings.easy;
+package coding.archived.easy;
 
 /**
  * EASY
